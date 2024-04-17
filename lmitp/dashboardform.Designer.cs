@@ -37,7 +37,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RightOrNo = new System.Windows.Forms.PictureBox();
+            this.TextCorrectOrNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightOrNo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,8 +106,9 @@
             // 
             // btnCheck
             // 
+            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.Location = new System.Drawing.Point(216, 202);
+            this.btnCheck.Location = new System.Drawing.Point(216, 223);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(144, 41);
             this.btnCheck.TabIndex = 7;
@@ -115,12 +119,30 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-145, 261);
+            this.pictureBox1.Location = new System.Drawing.Point(-139, 270);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(880, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // RightOrNo
+            // 
+            this.RightOrNo.Location = new System.Drawing.Point(389, 107);
+            this.RightOrNo.Name = "RightOrNo";
+            this.RightOrNo.Size = new System.Drawing.Size(131, 86);
+            this.RightOrNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RightOrNo.TabIndex = 9;
+            this.RightOrNo.TabStop = false;
+            // 
+            // TextCorrectOrNo
+            // 
+            this.TextCorrectOrNo.AutoSize = true;
+            this.TextCorrectOrNo.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextCorrectOrNo.Location = new System.Drawing.Point(92, 188);
+            this.TextCorrectOrNo.Name = "TextCorrectOrNo";
+            this.TextCorrectOrNo.Size = new System.Drawing.Size(0, 28);
+            this.TextCorrectOrNo.TabIndex = 10;
             // 
             // dashboardform
             // 
@@ -128,6 +150,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TextCorrectOrNo);
+            this.Controls.Add(this.RightOrNo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.label2);
@@ -140,6 +164,7 @@
             this.Name = "dashboardform";
             this.Text = "dashboardform";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightOrNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +180,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox RightOrNo;
+        private System.Windows.Forms.Label TextCorrectOrNo;
     }
 }

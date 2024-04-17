@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -40,7 +41,7 @@ namespace lmitp
             txtAnswer.Text = "";
         }
 
-        private void CheckAnswer(int userAnswer)
+        private async Task CheckAnswer(int userAnswer)
         {
             int correctAnswer;
             // Calculate the correct answer based on the sign
@@ -59,13 +60,28 @@ namespace lmitp
             // Check if the user's answer is correct
             if (userAnswer == correctAnswer)
             {
+                RightOrNo.ImageLocation = "C:\\Users\\Denis\\Desktop\\imgs\\check-green.gif";
                 // Show a custom message box for correct answer
-                MessageBox.Show("Congratulations!\nYour answer is correct.", "Correct Answer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                TextCorrectOrNo.Text = "Congratulations! Your answer is correct.";
+                TextCorrectOrNo.AutoSize = true;
+                TextCorrectOrNo.Location = new Point(55, TextCorrectOrNo.Location.Y);
+                await Task.Delay(3000);
+                TextCorrectOrNo.Text = null;
+                RightOrNo.ImageLocation = null;
             }
             else
             {
-                // Show a custom message box for incorrect answer
-                MessageBox.Show($"Sorry, the correct answer is {correctAnswer}.", "Incorrect Answer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                RightOrNo.ImageLocation = "C:\\Users\\Denis\\Desktop\\imgs\\error.gif";
+                var size = RightOrNo.Size;
+                size.Height = 67;
+                size.Width = 50;
+                RightOrNo.Size = size;
+                TextCorrectOrNo.Text = $"Sorry, the correct answer is {correctAnswer}.";
+
+                await Task.Delay(3000);
+                TextCorrectOrNo.Text = null;
+                RightOrNo.ImageLocation = null;
             }
 
             // Generate a new exercise after checking the answer
