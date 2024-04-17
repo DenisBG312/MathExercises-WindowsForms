@@ -15,6 +15,17 @@ namespace lmitp
         public employeeform()
         {
             InitializeComponent();
+            GenerateExercise();
+        }
+
+        private void GenerateExercise()
+        {
+            Random random = new Random();
+            lblNumber1.Text = random.Next(1, 101).ToString();
+            lblNumber2.Text = random.Next(1, 101).ToString();
+
+            string[] randomSigns = new string[] { "+", "-", "*", "/" };
+            lblSign.Text = randomSigns[random.Next(randomSigns.Length)];
         }
     }
 }
