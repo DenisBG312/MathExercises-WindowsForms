@@ -35,6 +35,9 @@
             this.lblSign = new System.Windows.Forms.Label();
             this.lblNumber1 = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.TextCorrectOrNo = new System.Windows.Forms.Label();
+            this.RightOrNo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RightOrNo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(416, 129);
+            this.label2.Location = new System.Drawing.Point(275, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 28);
             this.label2.TabIndex = 11;
@@ -63,7 +66,7 @@
             // txtAnswer
             // 
             this.txtAnswer.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtAnswer.Location = new System.Drawing.Point(448, 129);
+            this.txtAnswer.Location = new System.Drawing.Point(307, 129);
             this.txtAnswer.Multiline = true;
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(81, 28);
@@ -73,7 +76,7 @@
             // 
             this.lblNumber2.AutoSize = true;
             this.lblNumber2.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNumber2.Location = new System.Drawing.Point(254, 129);
+            this.lblNumber2.Location = new System.Drawing.Point(225, 129);
             this.lblNumber2.Name = "lblNumber2";
             this.lblNumber2.Size = new System.Drawing.Size(156, 28);
             this.lblNumber2.TabIndex = 9;
@@ -93,7 +96,7 @@
             // 
             this.lblNumber1.AutoSize = true;
             this.lblNumber1.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNumber1.Location = new System.Drawing.Point(57, 129);
+            this.lblNumber1.Location = new System.Drawing.Point(126, 129);
             this.lblNumber1.Name = "lblNumber1";
             this.lblNumber1.Size = new System.Drawing.Size(122, 28);
             this.lblNumber1.TabIndex = 7;
@@ -108,6 +111,25 @@
             this.btnCheck.TabIndex = 12;
             this.btnCheck.Text = "Check Answers";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // TextCorrectOrNo
+            // 
+            this.TextCorrectOrNo.AutoSize = true;
+            this.TextCorrectOrNo.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextCorrectOrNo.Location = new System.Drawing.Point(106, 176);
+            this.TextCorrectOrNo.Name = "TextCorrectOrNo";
+            this.TextCorrectOrNo.Size = new System.Drawing.Size(0, 28);
+            this.TextCorrectOrNo.TabIndex = 14;
+            // 
+            // RightOrNo
+            // 
+            this.RightOrNo.Location = new System.Drawing.Point(394, 101);
+            this.RightOrNo.Name = "RightOrNo";
+            this.RightOrNo.Size = new System.Drawing.Size(131, 86);
+            this.RightOrNo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RightOrNo.TabIndex = 15;
+            this.RightOrNo.TabStop = false;
             // 
             // employeeform
             // 
@@ -115,6 +137,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RightOrNo);
+            this.Controls.Add(this.TextCorrectOrNo);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAnswer);
@@ -125,6 +149,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "employeeform";
             this.Text = "employeeform";
+            ((System.ComponentModel.ISupportInitialize)(this.RightOrNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +164,7 @@
         private System.Windows.Forms.Label lblSign;
         private System.Windows.Forms.Label lblNumber1;
         private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Label TextCorrectOrNo;
+        private System.Windows.Forms.PictureBox RightOrNo;
     }
 }
